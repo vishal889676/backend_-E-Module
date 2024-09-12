@@ -1,0 +1,8 @@
+<h1>Edit Student</h1>
+<form action="/edit/<%= student._id %>" method="POST">
+  <input type="text" name="name" value="<%= student.name %>" required>
+  <input type="text" name="studentId" value="<%= student.studentId %>" required>
+  <input type="date" name="enrollmentDate" value="<%= student.enrollmentDate.toISOString().substring(0, 10) %>" required>
+  <input type="text" name="department" value="<%= student.department %>" required>
+  <button type="submit">Update Student</button>
+</form>
